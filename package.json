@@ -1,0 +1,33 @@
+{
+  "name": "viewbot_x",
+  "version": "1.1.1",
+  "description": "It's app which can monitor click events or hashChange from page ",
+  "main": "dist/bundle.js",
+  "author": "Lei",
+  "license": "ISC",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server --config  build/webpack.dev.config.js",
+    "dev": "NODE_ENV=development webpack-dev-server --config  build/webpack.dev.config.js",
+    "build": "NODE_ENV=production webpack --config  build/webpack.prod.config.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
+    "css-loader": "^3.6.0",
+    "html-webpack-plugin": "^4.3.0",
+    "isc-license": "^1.0.2",
+    "less-loader": "^6.2.0",
+    "node-sass": "^4.14.1",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0",
+    "sass-loader": "^9.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12",
+    "webpack-node-externals": "^2.5.0"
+  }
+}

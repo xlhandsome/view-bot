@@ -1,0 +1,69 @@
+.paramContent
+  min-height: 80px
+.viewCanBan
+  width: 200px
+  height: 200px
+  position: fixed
+  bottom: 0
+  right: 0
+  z-index: 9999
+  border: 2px #000 solid
+  background-color: black
+  color: lawngreen
+  opacity: 0.5
+  font-size: 12px
+.viewCanBan .row 
+  text-align: left
+  max-height: 32px
+  overflow: hidden
+
+.viewCanBan .row .label
+  display: inline-block
+  width: 70px
+
+.viewCanBan .row .value
+  font-size: 12px
+  display: inline-block
+  width: 120px
+  vertical-align: top
+  white-space: normal
+  word-break: break-all
+
+.scale
+  transform: scale(0.8)
+
+.blockContent
+  width: 28px
+  height: 15px
+  background-color: greenyellow
+
+.column
+  width: 28px
+  margin: 10px
+  height: 80px
+  transform: rotate(-180deg)
+  position: relative
+  float: left
+  overflow: hidden
+
+
+.brickContent:after 
+  visibility: hidden 
+  display: block 
+  font-size: 0 
+  content: "." 
+  clear: both 
+  height: 0 
+
+.column .blockContent
+  margin: 2px 0
+
+.columnName
+  transform: scale(0.8)
+  font-size: 12px
+  display: inline-block
+  min-width: 38px
+  position: relative
+  bottom: 6px
+  left: 4px
+  margin-right: 10px

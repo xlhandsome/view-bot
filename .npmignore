@@ -1,0 +1,9 @@
+node_modules
+public/
+build/
+.babelrc
+package-lock.json
+package.json
+src/app.js
+.npmignore
+zancun.text

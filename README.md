@@ -1,0 +1,1 @@
+###### It's app which can monitor click events or hashChange from page 
