@@ -1,12 +1,23 @@
 {
   "name": "viewbot_x",
-  "version": "1.1.1",
-  "description": "It's app which can monitor click events or hashChange from page ",
+  "version": "1.1.4",
+  "description": "基于react的前端页面性能监控插件 It's small board which can monitor click events or hashchange from page ",
   "main": "dist/bundle.js",
   "author": "Lei",
   "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xlhandsome/view-bot.git"
+  },
+  "keywords": [
+    "react",
+    "javascript",
+    "js",
+    "util",
+    "监控"
+  ],
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server --config  build/webpack.dev.config.js",
+    "start": "NODE_ENV=development webpack-dev-server --config  build/webpack.dev.config.babel",
     "dev": "NODE_ENV=development webpack-dev-server --config  build/webpack.dev.config.js",
     "build": "NODE_ENV=production webpack --config  build/webpack.prod.config.js"
   },
@@ -21,13 +32,16 @@
     "isc-license": "^1.0.2",
     "less-loader": "^6.2.0",
     "node-sass": "^4.14.1",
+    "optimize-css-assets-webpack-plugin": "^5.0.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-router-dom": "^5.2.0",
     "sass-loader": "^9.0.2",
     "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^3.0.7",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.12",
+    "webpack-merge": "^5.0.9",
     "webpack-node-externals": "^2.5.0"
   }
 }

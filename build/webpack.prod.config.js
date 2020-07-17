@@ -1,27 +1,28 @@
 const path = require('path');
+const webpack = require('webpack')
 const nodeExternals = require('webpack-node-externals');
+const ZipCss = require('optimize-css-assets-webpack-plugin');
 
-module.exports = {
+const baseConfig = require('./webpack.base.config') //压缩js
+const { merge } = require('webpack-merge')
+
+const prodConfig = merge(baseConfig,{
   mode: 'production',
-  devtool: 'source-map',
+  devtool: 'cheap-module-source-map',
   entry: './src/components.js',
   output: {
-    filename: 'bundle.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, '../dist'),
     libraryTarget: 'umd'
   },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css|sass$/,
-        use: ['style-loader', 'css-loader','sass-loader']
-      }
-    ]
-  },
+  plugins:[
+    new webpack.HashedModuleIdsPlugin(),
+    new webpack.LoaderOptionsPlugin({
+          minimize: true
+        }),
+    new ZipCss(),
+  ],
   externals: [nodeExternals()]
-};
+})
+module.exports = prodConfig;
+

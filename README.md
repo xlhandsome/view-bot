@@ -1,1 +1,1 @@
-###### It's app which can monitor click events or hashChange from page 
+###### 基于react的前端页面性能监控插件 It's small board which can monitor click events or hashchange from page  

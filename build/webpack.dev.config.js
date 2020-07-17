@@ -1,33 +1,24 @@
-const path = require('path');
-const htmlWebpackPlugin = require('html-webpack-plugin');
+const baseConfig = require('./webpack.base.config') 
+const webpack = require('webpack')
 
-module.exports = {
-  devtool: 'source-map',
+const { merge } = require('webpack-merge')
+
+
+
+const devConfig = merge(baseConfig,{
+  devtool: 'cheap-module-eval-source-map',
   mode: 'development',
   entry: './src/app.js',
-  output: {
-    filename: 'bundle.js',
-    path: path.resolve(__dirname, '../dist'),
-  },
-  module: {
-    rules: [
-      {
-        test: /\.js$/,
-        use: 'babel-loader',
-        exclude: /node_modules/
-      },
-      {
-        test: /\.css|sass$/,
-        use: ['style-loader', 'css-loader','sass-loader']
-      }
-    ]
-  },
   devServer: {
-    contentBase: './dist'
+    contentBase: './dist',
+    port:1998,
+    open: true,
+    clientLogLevel: 'silent',
+    stats: 'errors-warnings',
   },
-  plugins: [
-    new htmlWebpackPlugin({
-      template: 'public/index.html'
-    })
+  plugins:[
+    new webpack.HotModuleReplacementPlugin(),
+    new webpack.NamedModulesPlugin(),    
   ],
-};
+})
+module.exports = devConfig;

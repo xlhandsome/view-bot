@@ -42,6 +42,7 @@ class ViewBot extends React.Component {
   refresh = ()=> {
     this.forceUpdate()
   }
+
   get viewContent(){
     let _params = this.params;
     let basicView = [];
