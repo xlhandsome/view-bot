@@ -1,4 +1,3 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 import { HashRouter, Switch } from 'react-router-dom'
 import ViewBot from './components/ViewBot'

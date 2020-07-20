@@ -1,6 +1,8 @@
 const TerserWebpackPlugin = require('terser-webpack-plugin') //压缩js
 const htmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { cleanDist } = require('../lib/cleanDist');
+const webpack = require('webpack')
 const path = require('path');
 const resolve = dir => path.resolve(__dirname, '../', dir)
 
@@ -52,6 +54,12 @@ module.exports = {
   plugins: [
     new htmlWebpackPlugin({
       template: 'public/index.html'
-    })
+    }),
+    new webpack.ProvidePlugin({
+      React: 'react'
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css', 
+    }),
   ],
 };

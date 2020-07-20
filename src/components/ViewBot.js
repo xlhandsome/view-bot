@@ -1,4 +1,3 @@
-import React from 'react'
 import { LineName,LableMap } from './constants'
 import { getCommonBrowersInfo } from '../../lib/util'
 import './viewbot.sass'
