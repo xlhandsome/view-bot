@@ -11,7 +11,7 @@ const prodConfig = merge(baseConfig,{
   devtool: 'cheap-module-source-map',
   entry: './src/components.js',
   output: {
-    filename: '[name].[hash].js',
+    filename: 'bundle.js',
     path: path.resolve(__dirname, '../dist'),
     libraryTarget: 'umd'
   },
