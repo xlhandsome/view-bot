@@ -3,7 +3,7 @@
 
 ----
 ### How to use
-  npm install viewbot_x
+  npm install viewbot_x <br/>
   import { viewBot } from 'viewbot_x'
 
 ----
