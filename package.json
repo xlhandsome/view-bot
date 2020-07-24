@@ -1,10 +1,11 @@
 {
   "name": "viewbot_x",
-  "version": "1.1.1-beta",
+  "version": "1.1.2-beta",
   "description": "基于react的前端页面性能监控插件 It's small board which can monitor click events or hashchange from page ",
   "main": "dist/bundle.js",
   "author": "Lei",
   "license": "ISC",
+  "miaoshu": "更新了说明",
   "repository": {
     "type": "git",
     "url": "https://github.com/xlhandsome/view-bot.git"
