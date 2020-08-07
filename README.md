@@ -1,4 +1,3 @@
-[![Anurag's github stats](https://github-readme-stats.vercel.app/api?username=xlhandsome&theme=radical)](https://github.com/anuraghazra/github-readme-stats)
 
 ### A TOY
 ###### It's small Board base in react which can monitor click events or hashchange from page 
