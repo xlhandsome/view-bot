@@ -8,3 +8,4 @@ src/app.js
 .npmignore
 zancun.text
 .vscode/
+coverage/
