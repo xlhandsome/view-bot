@@ -3,6 +3,7 @@ import { HashRouter, Switch } from 'react-router-dom'
 import ViewBot from './components/ViewBot'
 
 class App extends React.Component {
+  
   get route() {
     return (
       <>  
@@ -11,7 +12,6 @@ class App extends React.Component {
       </>
     )
   }
-
   render() {
     return (
       <HashRouter>
